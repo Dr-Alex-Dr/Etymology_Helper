@@ -5,6 +5,8 @@ from bs4 import BeautifulSoup
 import re
 from controllers.pageScrapper import pageScrapper
 
+def getCurrentTime():
+    print('time')
 
 def start(update: Update, context):
     update.message.reply_text(
