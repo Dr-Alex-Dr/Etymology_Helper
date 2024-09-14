@@ -49,7 +49,7 @@ def dataProcessing(pageData, word):
                     first_occurrence = index
                     first_origin = origin_word
 
-        found_dates = re.findall(r'\b\d{1,4}\b', paragraph_text)
+        found_dates = re.findall(r'\b\d{2,4}\b', paragraph_text)
         dates.extend(found_dates)
 
     if dates:
