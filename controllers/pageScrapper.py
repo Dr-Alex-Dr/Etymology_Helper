@@ -32,7 +32,7 @@ def pageScrapper(words):
 
 
 def dataProcessing(pageData, word):
-    origin = ['Old English', 'Old Frisian', 'Old High German']
+    origin = ['Latin', 'Old English', 'Proto-Germanic', 'Russian', 'Old French']
 
     paragraphs = pageData.find_all('p')
 
