@@ -59,4 +59,4 @@ def dataProcessing(pageData, word):
     if first_origin or oldest_date:
         return f'{word} {first_origin if first_origin else "Не найдено"} {oldest_date if oldest_date else "Неизвестная дата"}'
     else:
-        return f'{word} информация не найдена'
+        return f'{word} информация не найдена.'
