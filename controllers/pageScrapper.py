@@ -56,7 +56,5 @@ def dataProcessing(pageData, word):
         date_objects = [int(date) for date in dates]
         oldest_date = min(date_objects)
 
-    if first_origin or oldest_date:
-        return f'{word} {first_origin if first_origin else "Не найдено"} {oldest_date if oldest_date else "Неизвестная дата"}'
-    else:
-        return f'{word} информация не найдена.'
+
+        return f'{word} None'
