@@ -36,13 +36,13 @@ def editText(words):
                                 first_occurrence = index
                                 first_origin = origin_word
 
-                    found_dates = re.findall(r'\b\d{2,4}s?\b', paragraph_text)
+                    found_dates = re.findall(r'\b\d{2,4}s?\b|\b\d{2,4}c\.\b', paragraph_text)
                     dates.extend(found_dates)
 
                 if dates:
-                    date_objects = [int(date.rstrip('s')) for date in dates]
+                    date_objects = [int(date.rstrip('s').rstrip('c.')) for date in dates]  # Удаление 's' и 'c.'
                     oldest_date = min(date_objects)
-
+                    
                 if not first_origin:
                     word_links = etymology_div.find_all('a', href=True)
                     for link in word_links:
