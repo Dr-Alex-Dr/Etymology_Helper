@@ -2,7 +2,7 @@ from telegram.ext import Updater
 from controllers.bot_controller import setup_dispatcher
 
 def main():
-    updater = Updater('YOUR_TELEGRAM_BOT_TOKEN', use_context=True)
+    updater = Updater('7393561125:AAFmPkiuzWNXgV3a337ntj-d0oxrGO7XdGI', use_context=True)
     dp = updater.dispatcher
 
     # Настроить диспетчер с хендлерами команд
