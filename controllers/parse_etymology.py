@@ -67,7 +67,7 @@ def find_earliest_date_century(text):
     if text is None:
         return None
     
-    found_dates_or_centuries = re.findall(r'\b(\d{1}c|\d{4}(?:s)?)\b', text)
+    found_dates_or_centuries = re.findall(r'\b(\d{1,2}c|\d{4}(?:s)?)\b', text)
     
     min_date = None
     for date_or_century in found_dates_or_centuries:
