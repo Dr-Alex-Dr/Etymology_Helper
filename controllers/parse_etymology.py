@@ -40,7 +40,7 @@ def fetch_etymology_text(url):
 
         if httpResponse.status_code == 200:
             htmlSoup = BeautifulSoup(httpResponse.text, 'html.parser')
-            domElement = htmlSoup.find('div', class_=re.compile(r'word__etymology_expand'))
+            domElement = htmlSoup.find('div')
             
             return domElement.get_text()          
     except:
